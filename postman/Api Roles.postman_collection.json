@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "66781d40-24fe-4f2a-8ecb-273e49f624d5",
+		"name": "Api Roles",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "producto",
+			"item": [
+				{
+					"name": "/producto",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNmIyYTcxMzhlZDEwMTUxYzNiMGMzZSIsImlhdCI6MTYwMDg2MDY0NiwiZXhwIjoxNjAwOTQ3MDQ2fQ.5RAbUrSdz_Esdon_cOUOm_wkPiSU6uTFF-ssDC4mNwg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"laptop-lenovo axus\",\n\t\"category\": \"laptops\",\n\t\"price\": 999.99,\n\t\"imgURL\": \"https://www.notebookcheck.org/uploads/tx_nbc2/4zu3_Lenovo_Ideapad_C340_15IWL.jp\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/producto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"producto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/producto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/producto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"producto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/producto/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNmIyYTcxMzhlZDEwMTUxYzNiMGMzZSIsImlhdCI6MTYwMDg2MDY0NiwiZXhwIjoxNjAwOTQ3MDQ2fQ.5RAbUrSdz_Esdon_cOUOm_wkPiSU6uTFF-ssDC4mNwg",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNmIyYTcxMzhlZDEwMTUxYzNiMGMzZSIsImlhdCI6MTYwMDg2MDY0NiwiZXhwIjoxNjAwOTQ3MDQ2fQ.5RAbUrSdz_Esdon_cOUOm_wkPiSU6uTFF-ssDC4mNwg",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/producto/5f6a5a7b346d9f1158371fad",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"producto",
+								"5f6a5a7b346d9f1158371fad"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "/users",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNmIyYTcxMzhlZDEwMTUxYzNiMGMzZSIsImlhdCI6MTYwMDg2ODIyOCwiZXhwIjoxNjAwOTU0NjI4fQ.jdtEOfGyH5IGs8wt_6tY1439990eST3s8hmQZjNM9mg",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"admin\",\n\t\"email\": \"admin@gmail.com\",\n\t\"roles\": [ \"admin\"]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "/ingresar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"admin@gmail.com\",\n\t\"password\": \"\"\n\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/ingresar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"ingresar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/registrar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"jehingson5\",\n\t\"email\": \"jehingson5@gmail.com\",\n\t\"password\": \"123456\",\n\t\"roles\": [\"admin\", \"moderator\"]\n\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/registrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
